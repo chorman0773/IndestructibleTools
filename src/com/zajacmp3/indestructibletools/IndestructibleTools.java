@@ -40,19 +40,15 @@ public class IndestructibleTools extends JavaPlugin implements Listener{
 		if(event.getEntity() instanceof Player){
 			Player player = (Player)event.getEntity();
 			if(player.getInventory().getHelmet()!=null){
-				System.out.println("test1");
 				player.getInventory().getHelmet().setDurability((short) 0);
 			}
 			if(player.getInventory().getBoots()!=null){
-				System.out.println("test2");
 				player.getInventory().getBoots().setDurability((short) 0);
 			}
 			if(player.getInventory().getLeggings()!=null){
-				System.out.println("test3");
 				player.getInventory().getLeggings().setDurability((short) 0);
 			}
 			if(player.getInventory().getChestplate()!=null){
-				System.out.println("test4");
 				player.getInventory().getChestplate().setDurability((short) 0);
 			}
 		}
