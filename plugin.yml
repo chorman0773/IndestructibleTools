@@ -1,4 +1,17 @@
 name: IndestructibleTools
-version: 1.0
+version: 1.1
 main: com.zajacmp3.indestructibletools.IndestructibleTools
 authors: [zajacmp3]
+
+permissions:
+  indestructibletools.*:
+    description: Gives access to all functions
+    children:
+      indestructibletools.armor: true
+      indestructibletools.tools: true
+  indestructibletools.armor:
+    description: Prevents armor from beeing destroy.
+    default: op
+  indestructibletools.tools:
+    description: Prevents tools from beeing destroyed.
+    default: op
