@@ -11,14 +11,15 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
-
+import java.awt.event.*;
 import ru.tehkode.permissions.PermissionManager;
 import ru.tehkode.permissions.bukkit.PermissionsEx;
 
-public class IndestructibleTools extends JavaPlugin implements Listener{
+public class IndestructibleTools extends JavaPlugin implements Listener,ActionListener{
 	public static Server server;
 	public static PermissionManager Permissions;
 	public void onDisable(){
+		getServer().getLogger().fine("exit server?");
 		
 	}
 	public void onEnable(){
@@ -89,5 +90,16 @@ public class IndestructibleTools extends JavaPlugin implements Listener{
 				return false;
 			}
 		}
+	
+	}
+	public boolean onCommand(Command cmd,CommandSender s,String name,String[] args){
+		if(name.equalsIgnoreCase("stop"){
+			
+		if(isAllowed(((Player)s),null)
+			getServer().stop();
+		}
+		
+		
+		
 	}
 }
